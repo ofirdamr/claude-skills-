@@ -1,0 +1,19 @@
+{
+  "name": "claude-skills-",
+  "description": "Claude Code skills by Ofir Damri.",
+  "owner": {
+    "name": "Ofir Damri",
+    "email": "ofirdamr@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "universal-framework",
+      "source": "./plugins/universal-framework",
+      "description": "Universal operating framework: lean internal multi-agent team led by a PM, mandatory Token-Economist first-consult with model pick, MD-file operating system, and a hard no-done-without-verification gate.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ofir Damri"
+      }
+    }
+  ]
+}

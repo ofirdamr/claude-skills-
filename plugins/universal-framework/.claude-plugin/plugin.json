@@ -1,0 +1,12 @@
+{
+  "name": "universal-framework",
+  "displayName": "Universal Framework",
+  "version": "1.0.0",
+  "description": "Universal operating framework for any project. Establishes the MD-file operating system, a lean internal multi-agent team led by a PM, a mandatory Token-Economist first-consult (leanest path / model pick / scope guard / orchestration mode), language rules, and a hard no-done-without-verification gate.",
+  "author": {
+    "name": "Ofir Damri",
+    "email": "ofirdamr@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["framework", "methodology", "orchestration", "token-economy", "quality-gate"]
+}
