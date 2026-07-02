@@ -11,6 +11,11 @@ Token-Economist first-consult (leanest path, model pick, scope guard,
 orchestration mode), English-to-user + Hebrew-RTL-deliverable language rules,
 and a hard "no done without verification" gate.
 
+It also ships a **`sync-upstream`** skill: if you edit a skill locally after
+installing it, say "sync my changes back" and it opens a draft PR against this
+repo (finding your local marketplace clone, showing the diff, and only pushing
+after you confirm) so the maintainer can just review and click merge.
+
 ## Install
 
 Add this repo as a marketplace source, then install the plugin:
@@ -32,4 +37,7 @@ plugins/universal-framework/
   skills/universal-framework/
     SKILL.md                            # the skill itself
     project-kickoff.template.md         # per-session kickoff template
+  skills/sync-upstream/
+    SKILL.md                            # send local skill edits back as a PR
+    sync-upstream.sh                    # git/gh driver script it calls
 ```

@@ -1,8 +1,8 @@
 {
   "name": "universal-framework",
   "displayName": "Universal Framework",
-  "version": "1.0.0",
-  "description": "Universal operating framework for any project. Establishes the MD-file operating system, a lean internal multi-agent team led by a PM, a mandatory Token-Economist first-consult (leanest path / model pick / scope guard / orchestration mode), language rules, and a hard no-done-without-verification gate.",
+  "version": "1.1.0",
+  "description": "Universal operating framework for any project. Establishes the MD-file operating system, a lean internal multi-agent team led by a PM, a mandatory Token-Economist first-consult (leanest path / model pick / scope guard / orchestration mode), language rules, a hard no-done-without-verification gate, and a sync-upstream skill for sending local skill edits back as a pull request.",
   "author": {
     "name": "Ofir Damri",
     "email": "ofirdamr@gmail.com"

@@ -9,8 +9,8 @@
     {
       "name": "universal-framework",
       "source": "./plugins/universal-framework",
-      "description": "Universal operating framework: lean internal multi-agent team led by a PM, mandatory Token-Economist first-consult with model pick, MD-file operating system, and a hard no-done-without-verification gate.",
-      "version": "1.0.0",
+      "description": "Universal operating framework: lean internal multi-agent team led by a PM, mandatory Token-Economist first-consult with model pick, MD-file operating system, a hard no-done-without-verification gate, and a sync-upstream skill to send local edits back as a pull request.",
+      "version": "1.1.0",
       "author": {
         "name": "Ofir Damri"
       }
