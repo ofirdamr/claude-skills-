@@ -11,22 +11,30 @@ Token-Economist first-consult (leanest path, model pick, scope guard,
 orchestration mode), English-to-user + Hebrew-RTL-deliverable language rules,
 and a hard "no done without verification" gate.
 
-It also ships a **`sync-upstream`** skill: if you edit a skill locally after
-installing it, say "sync my changes back" and it opens a draft PR against this
-repo (finding your local marketplace clone, showing the diff, and only pushing
-after you confirm) so the maintainer can just review and click merge.
+**`sync-upstream`** — if you edit a skill locally after installing it, say
+"sync my changes back" and it opens a **draft PR** against this repo (finding
+your local marketplace clone, showing the diff, and only pushing after you
+confirm). Only the maintainer merges — this skill has no path to merge.
 
 ## Install
 
-Add this repo as a marketplace source, then install the plugin:
+Add this repo as a marketplace source, then install whichever plugin you want:
 
 ```
 /plugin marketplace add ofirdamr/claude-skills-
 /plugin install universal-framework@claude-skills-
+/plugin install sync-upstream@claude-skills-
 ```
 
-Once installed, the `universal-framework` skill is available in any project on
-your account. Invoke it at the start of a session or before planning a task.
+Once installed, a plugin's skill is available in any project on your account.
+Invoke `universal-framework` at the start of a session or before planning a
+task; invoke `sync-upstream` whenever you want a local skill edit sent back.
+
+## Contributing
+
+Adding a skill? See [CONTRIBUTING.md](CONTRIBUTING.md) — every skill in this
+repo must be a drop-in zip, maintainer-merge-only, short title/description,
+and token-lean.
 
 ## Repo layout
 
@@ -37,6 +45,8 @@ plugins/universal-framework/
   skills/universal-framework/
     SKILL.md                            # the skill itself
     project-kickoff.template.md         # per-session kickoff template
+plugins/sync-upstream/
+  .claude-plugin/plugin.json            # plugin manifest
   skills/sync-upstream/
     SKILL.md                            # send local skill edits back as a PR
     sync-upstream.sh                    # git/gh driver script it calls

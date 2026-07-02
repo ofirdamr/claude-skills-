@@ -9,8 +9,17 @@
     {
       "name": "universal-framework",
       "source": "./plugins/universal-framework",
-      "description": "Universal operating framework: lean internal multi-agent team led by a PM, mandatory Token-Economist first-consult with model pick, MD-file operating system, a hard no-done-without-verification gate, and a sync-upstream skill to send local edits back as a pull request.",
-      "version": "1.1.0",
+      "description": "Lean multi-agent operating framework: PM-led roles, mandatory token/model-pick gate, MD-file memory, no-done-without-verification.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ofir Damri"
+      }
+    },
+    {
+      "name": "sync-upstream",
+      "source": "./plugins/sync-upstream",
+      "description": "Send local skill edits back as a draft PR for the maintainer to review and merge.",
+      "version": "1.0.0",
       "author": {
         "name": "Ofir Damri"
       }

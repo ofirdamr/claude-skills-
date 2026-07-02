@@ -1,0 +1,12 @@
+{
+  "name": "sync-upstream",
+  "displayName": "Sync Upstream",
+  "version": "1.0.0",
+  "description": "Send local skill edits back as a draft PR for the maintainer to review and merge.",
+  "author": {
+    "name": "Ofir Damri",
+    "email": "ofirdamr@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": ["contribute", "pull-request", "sync"]
+}

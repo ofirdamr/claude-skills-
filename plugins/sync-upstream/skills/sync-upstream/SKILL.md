@@ -61,6 +61,10 @@ move) their edit into that clone first, then re-run this skill.
 
 ## Guardrails
 
+- **This skill can only open draft PRs — it never merges, and it has no
+  command path to merge.** Merge rights on `ofirdamr/claude-skills-` stay
+  with the repo owner; anyone else's edits land as a draft PR the owner
+  reviews and merges (or doesn't) on their own terms.
 - Never push directly to `main`, never force-push.
 - Never fabricate a commit message that doesn't match the diff.
 - If `gh` isn't installed or isn't authenticated, say so and give the user
