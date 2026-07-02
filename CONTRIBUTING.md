@@ -30,5 +30,5 @@ meet all four:
    loads on demand instead of inlining it. If a skill grows past what one
    read-through needs, split it rather than padding it.
 
-See `plugins/sync-upstream/` for the reference-sized example (~90 lines
-total, one script, no bundled extras).
+See `plugins/sync-upstream/` for the reference-sized example (~35-line
+`SKILL.md`, no bundled scripts — it drives GitHub's API tools directly).

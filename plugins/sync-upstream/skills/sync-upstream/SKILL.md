@@ -1,22 +1,48 @@
 ---
 name: sync-upstream
 description: >-
-  Use when the user wants to send local edits made to an installed
-  claude-skills- plugin back upstream as a pull request — "sync my changes
-  back", "send this upstream", "auto sync". Finds the local install
-  automatically and opens a draft PR only after the user confirms.
+  Use when the user wants to send an edit they made to an installed
+  claude-skills- plugin file back to the source repo (ofirdamr/claude-skills-)
+  as a pull request — "sync my changes", "send this upstream", "auto sync".
+  Works entirely through GitHub API tools (fork, branch, commit, PR) — no
+  git or gh CLI, no local clone. Works the same on mobile, web, or desktop.
+  Opens a draft PR only after the user confirms; never merges.
 ---
 
 # Sync Upstream
 
-Two steps. Nothing to memorize — the script finds everything itself.
+Sends a skill file the user just edited back to `ofirdamr/claude-skills-` as
+a draft PR, using GitHub's API tools only — the ones already available in
+this session (e.g. `mcp__github__*`, or `gh` if that's what this
+environment provides). No git clone, no local install path to find.
 
-1. Run `bash <skill-dir>/sync-upstream.sh`. Read-only, shows what changed.
-   If it says "nothing to sync," stop.
-2. Show the user the diff and get a clear go-ahead. Then run
-   `bash <skill-dir>/sync-upstream.sh confirm`. It commits, pushes (forking
-   automatically if the user lacks write access), and opens a **draft PR**.
-   Report the URL it prints.
+## Steps
 
-Never skip step 2's confirmation. Never merge — the script has no merge
-command; only the maintainer merges, on github.com, on their own terms.
+1. **Identify the file(s) and their repo path.** You already have the
+   edited content. Its path in the marketplace repo is
+   `plugins/<plugin>/skills/<skill>/<file>` — same layout as this repo.
+
+2. **Fetch the current upstream version** of that file from
+   `ofirdamr/claude-skills-` (default branch) and compare to the edited
+   version. If identical, tell the user there's nothing to sync — stop.
+
+3. **Show the user the diff and get explicit confirmation.** Opening a PR
+   is visible to others — never do it just because a diff exists.
+
+4. **Once confirmed:**
+   - Fork `ofirdamr/claude-skills-` to the user's own account (skip if
+     already forked).
+   - Create a branch off the fork's default branch, e.g. `sync/<slug>`.
+   - Write the edited file's new content to that branch (one write per
+     changed file).
+   - Open a **draft** pull request, head `<user>:<branch>`, base
+     `ofirdamr:main`, with a title/body that describes the real change.
+
+5. **Report the PR URL back to the user.** Do not merge it — this skill has
+   no merge step. Only the repo owner merges, on their own schedule.
+
+## After it's merged
+
+Once the maintainer merges the PR, everyone gets it: any account, any
+project, next time they run `/plugin marketplace update` or reinstall the
+plugin — one shared skill, improved by whoever's using it.

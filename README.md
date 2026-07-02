@@ -11,10 +11,10 @@ Token-Economist first-consult (leanest path, model pick, scope guard,
 orchestration mode), English-to-user + Hebrew-RTL-deliverable language rules,
 and a hard "no done without verification" gate.
 
-**`sync-upstream`** — if you edit a skill locally after installing it, say
-"sync my changes back" and it opens a **draft PR** against this repo (finding
-your local marketplace clone, showing the diff, and only pushing after you
-confirm). Only the maintainer merges — this skill has no path to merge.
+**`sync-upstream`** — if you edit a skill file after installing it, say "sync
+my changes back" and it opens a **draft PR** against this repo (via GitHub's
+API tools, so it works the same on mobile, web, or desktop — no git/gh CLI
+needed). Only the maintainer merges — this skill has no path to merge.
 
 ## Install
 
@@ -48,6 +48,5 @@ plugins/universal-framework/
 plugins/sync-upstream/
   .claude-plugin/plugin.json            # plugin manifest
   skills/sync-upstream/
-    SKILL.md                            # send local skill edits back as a PR
-    sync-upstream.sh                    # git/gh driver script it calls
+    SKILL.md                            # send a local skill edit back as a PR
 ```
