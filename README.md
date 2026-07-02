@@ -18,13 +18,20 @@ needed). Only the maintainer merges — this skill has no path to merge.
 
 ## Install
 
-Add this repo as a marketplace source, then install whichever plugin you want:
+**On desktop/terminal Claude Code**, `/plugin` works as a chat command:
 
 ```
 /plugin marketplace add ofirdamr/claude-skills-
 /plugin install universal-framework@claude-skills-
 /plugin install sync-upstream@claude-skills-
 ```
+
+**On Claude Code web/mobile**, `/plugin` isn't available (it needs an
+interactive picker those sessions don't support) — instead just ask in plain
+language and Claude runs the equivalent CLI commands itself:
+
+> Install the universal-framework and sync-upstream skills from
+> ofirdamr/claude-skills-
 
 Once installed, a plugin's skill is available in any project on your account.
 Invoke `universal-framework` at the start of a session or before planning a
