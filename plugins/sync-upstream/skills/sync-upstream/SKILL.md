@@ -16,6 +16,17 @@ a draft PR, using GitHub's API tools only — the ones already available in
 this session (e.g. `mcp__github__*`, or `gh` if that's what this
 environment provides). No git clone, no local install path to find.
 
+## Requirements — only for sending edits back
+
+Installing and *using* any skill from this marketplace needs nothing extra —
+it's a public repo, free, works for anyone on any plan. This skill's
+send-back step is different: it needs the user's own free GitHub account,
+connected to their Claude Code session (Settings → Connectors, one-time,
+free — not a paid-plan feature). If no GitHub tool is available in this
+session when this skill runs, say exactly that — "connect GitHub in Settings
+to send this, it's free and takes a minute" — instead of a raw tool error or
+retrying blindly.
+
 ## Steps
 
 1. **Identify the file(s) and their repo path.** You already have the
