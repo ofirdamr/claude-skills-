@@ -20,12 +20,13 @@ environment provides). No git clone, no local install path to find.
 
 Installing and *using* any skill from this marketplace needs nothing extra —
 it's a public repo, free, works for anyone on any plan. This skill's
-send-back step is different: it needs the user's own free GitHub account,
-connected to their Claude Code session (Settings → Connectors, one-time,
-free — not a paid-plan feature). If no GitHub tool is available in this
-session when this skill runs, say exactly that — "connect GitHub in Settings
-to send this, it's free and takes a minute" — instead of a raw tool error or
-retrying blindly.
+send-back step is different: it needs the user's own GitHub account connected
+to Claude Code via the Claude GitHub App (set up at claude.ai/code when
+creating an environment — this is NOT the general claude.ai "Connectors"
+panel, which has no GitHub option). If no GitHub tool is available in this
+session when this skill runs, say exactly that — "connect GitHub at
+claude.ai/code to send this" — instead of a raw tool error or retrying
+blindly.
 
 ## Steps
 
@@ -41,13 +42,16 @@ retrying blindly.
    is visible to others — never do it just because a diff exists.
 
 4. **Once confirmed:**
+   - Look up `ofirdamr/claude-skills-`'s **default branch** (fetch the repo
+     info — do NOT assume `main`; installs read whatever the default branch
+     is, so the PR must target it or the merge won't reach anyone).
    - Fork `ofirdamr/claude-skills-` to the user's own account (skip if
      already forked).
    - Create a branch off the fork's default branch, e.g. `sync/<slug>`.
    - Write the edited file's new content to that branch (one write per
      changed file).
    - Open a **draft** pull request, head `<user>:<branch>`, base
-     `ofirdamr:main`, with a title/body that describes the real change.
+     `ofirdamr:<default-branch>`, with a title/body describing the change.
 
 5. **Report the PR URL back to the user.** Do not merge it — this skill has
    no merge step. Only the repo owner merges, on their own schedule.
